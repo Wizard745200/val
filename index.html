@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffebee;
+            margin: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        h1 {
+            color: #d50000;
+        }
+        .btn {
+            background-color: #ff1744;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #d50000;
+        }
+        #noButton {
+            position: relative;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine, Anu? ❤️</h1>
+        <button class="btn" onclick="showMessage('YES')">YES</button>
+        <button class="btn" id="noButton" onclick="moveNoButton()">NO 😞</button>
+        <p id="response" style="font-size: 20px; color: #d50000; font-weight: bold;"></p>
+    </div>
+
+    <script>
+        function showMessage(answer) {
+            document.getElementById('response').innerText = "Hehehehe! I knew you'd say '" + answer + "' 💖";
+        }
+
+        function moveNoButton() {
+            var btn = document.getElementById('noButton');
+            var randomX = Math.floor(Math.random() * 300) - 150; // Random X position
+            var randomY = Math.floor(Math.random() * 300) - 150; // Random Y position
+
+            btn.style.transform = `translate(${randomX}px, ${randomY}px)`; // Move the button
+        }
+    </script>
+</body>
+</html>
